@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c8102e;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: #c8102e;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #a00a24;
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #c8102e;
+}
+
+.gallery, .video-gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gallery img, .video-gallery iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-gallery iframe {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.product {
+    margin-bottom: 2rem;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h4 {
+    margin: 0.5rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #c8102e;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #a00a24;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social-media {
+    margin: 1rem 0;
+}
+
+footer .social-media a {
+    margin: 0 0.5rem;
+}
+
+footer .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .video-gallery iframe {
+        min-width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Massey Ferguson</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#history">História</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#news">Notícias</a></li>
+                    <li><a href="#media">Galeria</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="https://th.bing.com/th/id/OIP.mHluEI-46E2SyijUr_7_3AHaEz?w=345&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Trator Massey Ferguson">
+            <div class="hero-text">
+                <h2>Transformando a Agricultura desde 1847</h2>
+                <p>Inovação e qualidade em cada detalhe.</p>
+                <a href="#products" class="btn">Conheça Nossos Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="history">
+        <div class="container">
+            <h2>Nossa História</h2>
+            <p>A Massey Ferguson tem uma rica tradição de inovação e excelência desde 1847. De nossas raízes na manufatura de colheitadeiras em Ontário até nossa expansão global, temos sido pioneiros em tecnologias que transformam a agricultura.</p>
+            <h3>Linha do Tempo</h3>
+            <ul class="timeline">
+                <li><strong>1847</strong> - Fundação da Massey Manufacturing Co. por Daniel Massey.</li>
+                <li><strong>1930s</strong> - Invenção do sistema de engate três pontos por Harry Ferguson.</li>
+                <li><strong>1953</strong> - Fusão com a Massey-Harris para formar a Massey-Harris-Ferguson.</li>
+                <li><strong>1958</strong> - Renomeação para Massey Ferguson.</li>
+                <li><strong>1994</strong> - Aquisição pela AGCO Corporation.</li>
+                <li><strong>2020s</strong> - Lançamento de novas tecnologias e modelos sustentáveis.</li>
+            </ul>
+            <h3>Galeria de Imagens</h3>
+            <div class="gallery">
+                <img src="https://th.bing.com/th/id/OIP.mHluEI-46E2SyijUr_7_3AHaEz?w=345&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Foto histórica 1">
+                <img src="https://th.bing.com/th/id/OIP.t5NODJyhQfNdCwL4A7AEfwAAAA?w=268&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Foto histórica 2">
+                <img src="https://th.bing.com/th/id/OIP.C8K0zQPXnlgNj47moAkkngHaEu?w=292&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Foto moderna 1">
+                <img src="https://th.bing.com/th/id/OIP.h7nOHkVSsBn6vKKjtsVG8QHaDV?w=298&h=157&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Foto moderna 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Produtos</h2>
+            <h3>Tratores</h3>
+            <p>Nossos tratores são projetados para maximizar a eficiência e a durabilidade. Explore nossos modelos mais recentes:</p>
+            <div class="product">
+                <img src="https://th.bing.com/th/id/OIP.h7nOHkVSsBn6vKKjtsVG8QHaDV?w=298&h=157&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Modelo 1">
+                <h4>Modelo 1</h4>
+                <p>Detalhes do Modelo 1: potência, características e aplicações.</p>
+            </div>
+            <div class="product">
+                <img src="https://th.bing.com/th/id/OIP.fLjhdimaSd69zCZJr34gmAHaEs?w=288&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Modelo 2">
+                <h4>Modelo 2</h4>
+                <p>Detalhes do Modelo 2: potência, características e aplicações.</p>
+            </div>
+            <h3>Colheitadeiras e Equipamentos</h3>
+            <p>Conheça nossa linha de colheitadeiras e outros equipamentos agrícolas inovadores:</p>
+            <!-- Adicione detalhes e imagens de outros produtos aqui -->
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Serviços</h2>
+            <h3>Suporte e Manutenção</h3>
+            <p>Oferecemos suporte completo para nossos produtos, incluindo manutenção e peças de reposição. Entre em contato para agendar um serviço ou obter mais informações.</p>
+            <h3>Rede de Concessionários</h3>
+            <p>Encontre concessionários e serviços autorizados próximos a você:</p>
+            <a href="https://www.masseyferguson.com/pt_br.html" class="btn">Localize um Concessionário</a>
+        </div>
+    </section>
+
+    <section id="news">
+        <div class="container">
+            <h2>Notícias e Eventos</h2>
+            <h3>Últimas Notícias</h3>
+            <article>
+                <h4>Inovação na Agricultura</h4>
+                <p>Descubra as últimas inovações e como estamos moldando o futuro da agricultura.</p>
+                <a href="news1.html" class="btn">Leia Mais</a>
+            </article>
+            <article>
+                <h4>Parceria com Instituições de Pesquisa</h4>
+                <p>Saiba mais sobre nossa colaboração com universidades e centros de pesquisa para desenvolver novas tecnologias.</p>
+                <a href="news2.html" class="btn">Leia Mais</a>
+            </article>
+            <h3>Eventos e Feiras</h3>
+            <p>Participe de nossos eventos e feiras para ver nossos produtos em ação:</p>
+            <a href="events.html" class="btn">Veja os Próximos Eventos</a>
+        </div>
+    </section>
+
+    <section id="media">
+        <div class="container">
+            <h2>Galeria de Mídia</h2>
+            <h3>Fotos</h3>
+            <div class="gallery">
+                <img src="https://th.bing.com/th/id/OIP.e-p30pRNFQsSBTwg3m38DwHaFK?w=223&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Imagem de mídia 1">
+                <img src="https://th.bing.com/th/id/OIP.PCzHqco3RAfK42cKjB2_2gHaE8?w=265&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Imagem de mídia 2">
+            </div>
+            <h3>Vídeos</h3>
+            <div class="video-gallery">
+                <iframe src="https://www.youtube.com/embed/video1" title="Vídeo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/video2" title="Vídeo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+            
+                <footer>
+                    <div class="container">
+                        <p>&copy; 2024 Massey Ferguson. Todos os direitos reservados.</p>
+                        <a href="#"><img src="https://www.facebook.com/masseyfergusonbr/" alt="Facebook"></a>
+                        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </footer>
+        
+</body>
+</html>
